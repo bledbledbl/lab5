@@ -57,7 +57,7 @@ List* getEdges(Graph* g, const char* label) {
 
 int getWeight(Graph* g, const char* label1, const char* label2) {
     if (!g || !label1 || !label2) return -1;
-    MapPair *par = map_search(g->adjacencyMap, &label);
+    MapPair *par = map_search(g->adjacencyMap, &label2);
     if(!par) return -1;
     List * lista = (List *)par->value;
     Edge * aux = list_first(lista);
