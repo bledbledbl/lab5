@@ -21,3 +21,15 @@ graph.c:45:34: error: ‘Graph’ has no member named ‘adjencyMap’; did you 
       |                                  ^~~~~~~~~~
       |                                  adjacencyMap
 2b1d4fb
+Fri May 15 06:50:39 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:45:21: error: implicit declaration of function ‘MapSearch’; did you mean ‘map_search’? [-Wimplicit-function-declaration]
+   45 |     MapPair * par = MapSearch(g->adjacencyMap, label);
+      |                     ^~~~~~~~~
+      |                     map_search
+graph.c:45:21: error: initialization of ‘MapPair *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+3e28c49
