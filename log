@@ -6,3 +6,18 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Fri May 15 06:50:24 PM UTC 2026: 
+ graph.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:45:21: error: implicit declaration of function ‘MapSearch’; did you mean ‘map_search’? [-Wimplicit-function-declaration]
+   45 |     MapPair * par = MapSearch(g->adjencyMap, label);
+      |                     ^~~~~~~~~
+      |                     map_search
+graph.c:45:34: error: ‘Graph’ has no member named ‘adjencyMap’; did you mean ‘adjacencyMap’?
+   45 |     MapPair * par = MapSearch(g->adjencyMap, label);
+      |                                  ^~~~~~~~~~
+      |                                  adjacencyMap
+2b1d4fb

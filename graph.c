@@ -42,13 +42,15 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
 
 List* getEdges(Graph* g, const char* label) {
     if (!g || !label) return NULL;
-
-    return NULL;
+    MapPair * par = MapSearch(g->adjencyMap, label);
+    List * lista = (List *)par->value;
+    return lista;
+    
 }
 
 int getWeight(Graph* g, const char* label1, const char* label2) {
     if (!g || !label1 || !label2) return -1;
-
+    
     
 
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
