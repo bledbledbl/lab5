@@ -49,6 +49,8 @@ List* getEdges(Graph* g, const char* label) {
 int getWeight(Graph* g, const char* label1, const char* label2) {
     if (!g || !label1 || !label2) return -1;
 
+    
+
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
 }
