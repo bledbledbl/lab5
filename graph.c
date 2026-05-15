@@ -47,7 +47,7 @@ List* getEdges(Graph* g, const char* label) {
     Edge * aux = list_first(lista);
     
     while(aux != NULL){
-        list_pushback(lista, aux->target);
+        list_pushBack(lista, aux->target);
         aux = list_next(lista);
     }
     return lista;
