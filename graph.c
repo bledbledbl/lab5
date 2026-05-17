@@ -52,6 +52,8 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
 
     List * edges = (List *) par->value;
     Edge * nuevo = (Edge *) malloc(sizeof(Edge));
+    if(nuevo == NULL) return;
+    
     nuevo->weight = weight;
     nuevo->target = strdup(dest);
 
