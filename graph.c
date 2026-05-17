@@ -47,7 +47,7 @@ void addNode(Graph* g, const char* label) {
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
-    MapPair * par = map_search(g->adjacencyMap, &src);
+    MapPair * par = map_search(g->adjacencyMap, (void*)src);
     if(par == NULL) return;
 
     List * edges = (List *) par->value;
@@ -62,7 +62,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
 
 List* getEdges(Graph* g, const char* label) {
     if (!g || !label) return NULL;
-    MapPair *par = map_search(g->adjacencyMap, &label);
+    MapPair *par = map_search(g->adjacencyMap, (void*)label);
     if(par == NULL) return NULL;
     
     return (List *)par->value;
